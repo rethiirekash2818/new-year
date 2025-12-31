@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Ammu | New Year 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Montserrat',sans-serif;background:linear-gradient(135deg,#0f0815 0%,#1a0f2e 50%,#0f0815 100%);color:#fff;min-height:100vh;overflow-x:hidden;scroll-behavior:smooth}
+        
+        .stars{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:1}
+        .star{position:absolute;width:2px;height:2px;background:#fff;border-radius:50%;animation:twinkle 3s infinite}
+        @keyframes twinkle{0%,100%{opacity:.3;transform:scale(1)}50%{opacity:1;transform:scale(1.5)}}
+        
+        header{min-height:100vh;display:grid;place-items:center;text-align:center;padding:2rem}
+        .hero{background:rgba(255,255,255,.08);backdrop-filter:blur(20px);border-radius:3rem;border:1px solid rgba(255,255,255,.15);padding:3.5rem 3rem;max-width:520px;box-shadow:0 40px 80px rgba(0,0,0,.6)}
+        
+        .heart-container{width:160px;height:140px;margin:0 auto 1.5rem;display:flex;align-items:center;justify-content:center}
+        .heart-container svg{animation:beatHeart 1.5s infinite;transform-origin:center}
+        @keyframes beatHeart{0%,100%{transform:scale(1)}25%{transform:scale(1.15)}50%{transform:scale(1)}}
+        
+        h1{font-family:'Dancing Script',cursive;font-size:clamp(2.8rem,8vw,4.5rem);background:linear-gradient(135deg,#ff9aa2,#ffeaa7);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:1rem}
+        .hero-text{font-size:1.1rem;line-height:1.7;opacity:.95;margin-bottom:1.5rem}
+        .timer-label{font-size:.8rem;letter-spacing:.1em;opacity:.8;margin-bottom:.5rem}
+        .timer{font-size:1.3rem;font-weight:600;letter-spacing:.05em;color:#ffeaa7;margin-bottom:1rem}
+        .pill{background:linear-gradient(135deg,#ff9aa2,#ffb7b2);color:#fff;padding:.9rem 2.2rem;border-radius:50px;font-weight:600;font-size:.95rem;margin:1.2rem auto;display:block;width:fit-content;box-shadow:0 12px 35px rgba(255,154,162,.5);cursor:pointer;border:none;transition:all .3s ease}
+        .pill:hover{transform:translateY(-3px);box-shadow:0 16px 45px rgba(255,154,162,.7)}
+        .scroll{font-size:.9rem;letter-spacing:.05em;opacity:.8;margin-top:2rem}
+        .arrow{font-size:2.2rem;margin-top:1rem;animation:bounce 2s infinite}
+        @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(.7rem)}}
+        
+        .container{max-width:1150px;margin:0 auto;padding:0 2rem 5rem}
+        .section-title{font-family:'Dancing Script',cursive;font-size:clamp(2.2rem,6vw,3.2rem);text-align:center;margin:5rem 0 1.5rem;background:linear-gradient(135deg,#ff9aa2,#ffeaa7);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+        .section-text{text-align:center;max-width:600px;margin:0 auto 4rem;font-size:1rem;opacity:.92;line-height:1.7}
+        
+        .story-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:3rem;margin:3rem 0}
+        .story-card{background:rgba(255,255,255,.07);backdrop-filter:blur(15px);border-radius:2.2rem;border:1px solid rgba(255,255,255,.1);padding:2.5rem;overflow:hidden;position:relative;box-shadow:0 25px 50px rgba(0,0,0,.4);transition:all .4s ease}
+        .story-card:hover{transform:translateY(-12px);box-shadow:0 35px 70px rgba(0,0,0,.5)}
+        .story-img{width:100%;height:280px;border-radius:1.5rem;overflow:hidden;margin-bottom:1.5rem}
+        .story-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+        .story-card:hover .story-img img{transform:scale(1.08)}
+        .story-tag{position:absolute;top:1.2rem;left:1.2rem;background:rgba(0,0,0,.8);color:#fff;padding:.6rem 1.2rem;border-radius:2rem;font-size:.8rem;font-weight:600}
+        .story-title{font-size:1.5rem;font-weight:700;color:#ffeaa7;margin-bottom:.5rem}
+        .story-date{font-size:.85rem;opacity:.85;text-transform:uppercase;letter-spacing:.08em;margin-bottom:1rem}
+        .story-text{line-height:1.8;opacity:.95;font-size:.98rem}
+        
+        .video-section{max-width:700px;margin:4rem auto;text-align:center}
+        .video-title{font-family:'Dancing Script',cursive;font-size:2.5rem;color:#ffeaa7;margin-bottom:2rem}
+        .video-box{width:100%;aspect-ratio:16/9;border-radius:2rem;overflow:hidden;border:2px solid #ff9aa2;box-shadow:0 30px 60px rgba(255,154,162,.3)}
+        .video-box iframe{width:100%;height:100%;border:none}
+        .dance-description{max-width:700px;margin:3rem auto 0;padding:2.5rem;background:rgba(255,255,255,.08);backdrop-filter:blur(20px);border-radius:2rem;border:1px solid rgba(255,255,255,.15);box-shadow:0 25px 50px rgba(0,0,0,.4)}
+        .dance-description p{font-size:1.05rem;line-height:2;opacity:.96;color:#fff;font-weight:300;text-align:center;letter-spacing:.5px}
+        
+        .wish-card{max-width:650px;margin:5rem auto;background:rgba(255,255,255,.08);backdrop-filter:blur(20px);border-radius:2.5rem;border:1px solid rgba(255,255,255,.2);padding:4rem 3rem;text-align:center;box-shadow:0 35px 70px rgba(0,0,0,.5);position:relative}
+        .wish-badge{position:absolute;top:1.5rem;right:2rem;background:#ffb7b2;color:#fff;padding:.7rem 1.5rem;border-radius:2rem;font-size:.85rem;font-weight:700}
+        .wish-title{font-family:'Dancing Script',cursive;font-size:3.2rem;color:#ffeaa7;margin-bottom:2rem}
+        .typewriter{min-height:5rem;font-size:1.1rem;line-height:1.8;margin:2.5rem 0;font-weight:300;color:#fff}
+        .wish-note{font-size:1.2rem;color:#ff9aa2;font-weight:600}
+        
+        .promises{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2.5rem;margin:5rem 0}
+        .promise{text-align:center;padding:2.8rem;background:rgba(255,255,255,.07);backdrop-filter:blur(15px);border-radius:2rem;border:1px solid rgba(255,255,255,.1);box-shadow:0 25px 50px rgba(0,0,0,.4);transition:transform .3s ease}
+        .promise:hover{transform:translateY(-8px)}
+        .promise-icon{font-size:3.8rem;margin-bottom:1rem;animation:float-icon 3s ease-in-out infinite}
+        @keyframes float-icon{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+        .promise-title{font-size:1.3rem;font-weight:700;color:#ffeaa7;margin-bottom:1rem}
+        .promise-text{font-size:.95rem;opacity:.92;line-height:1.7}
+        
+        .quiz{max-width:580px;margin:5rem auto;text-align:center}
+        .quiz-box{background:rgba(255,255,255,.08);backdrop-filter:blur(20px);border-radius:2.5rem;border:1px solid rgba(255,255,255,.15);padding:4rem 3rem;box-shadow:0 35px 70px rgba(0,0,0,.5)}
+        .quiz-title{font-family:'Dancing Script',cursive;font-size:2.9rem;color:#ffeaa7;margin-bottom:1.5rem}
+        .quiz-text{font-size:1rem;opacity:.92;margin-bottom:3rem;line-height:1.7}
+        .quiz-q{font-size:1.2rem;margin-bottom:2rem;line-height:1.6;font-weight:500}
+        .quiz-btn{display:block;width:100%;max-width:380px;margin:1.2rem auto;padding:1.3rem 2rem;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.2);color:#fff;border-radius:50px;font-size:1rem;cursor:pointer;transition:all .3s ease;font-weight:500}
+        .quiz-btn:hover{background:linear-gradient(135deg,#ff9aa2,#ffb7b2);transform:translateY(-4px);box-shadow:0 20px 50px rgba(255,154,162,.4);border-color:transparent}
+        
+        .popup{position:fixed;inset:0;background:rgba(0,0,0,.95);backdrop-filter:blur(10px);display:none;grid-template-rows:1fr;place-items:center;z-index:1000;padding:2rem}
+        .popup.show{display:grid}
+        .popup-content{background:rgba(255,255,255,.1);backdrop-filter:blur(25px);border-radius:2.5rem;border:1px solid rgba(255,255,255,.2);padding:4rem 3rem;max-width:480px;width:100%;text-align:center;box-shadow:0 50px 100px rgba(0,0,0,.7);animation:popupIn .5s ease}
+        @keyframes popupIn{from{opacity:0;transform:scale(.7)translateY(50px)}to{opacity:1;transform:scale(1)translateY(0)}}
+        .popup-heart{font-size:4.5rem;margin-bottom:1rem;animation:beatHeart 1.5s infinite}
+        .popup-title{font-size:1.5rem;font-weight:700;color:#ff9aa2;margin-bottom:.8rem}
+        .popup-text{font-size:1.1rem;opacity:.95;margin-bottom:2.5rem;line-height:1.7;color:#fff}
+        .popup-next{background:linear-gradient(135deg,#ff9aa2,#ffb7b2);border:none;padding:1.3rem 3.5rem;border-radius:50px;color:#fff;font-weight:700;font-size:1rem;cursor:pointer;box-shadow:0 15px 40px rgba(255,154,162,.4);transition:all .3s ease}
+        .popup-next:hover{transform:translateY(-3px);box-shadow:0 20px 50px rgba(255,154,162,.5)}
+        
+        .envelope{position:fixed;bottom:3rem;right:3rem;font-size:4.5rem;cursor:pointer;z-index:500;filter:drop-shadow(0 0 25px #ff9aa2);animation:bounce 2.2s infinite;display:none;transition:transform .3s}
+        .envelope:hover{transform:scale(1.15)}
+        
+        .letter-modal{position:fixed;inset:0;background:rgba(0,0,0,.96);backdrop-filter:blur(15px);display:none;grid-template-rows:1fr;place-items:center;z-index:2000;padding:2rem}
+        .letter-modal.show{display:grid}
+        .letter{background:#fdf9f6;color:#2a1a2e;padding:4.5rem 4rem;max-width:650px;width:100%;border-radius:2.5rem;box-shadow:0 60px 120px rgba(0,0,0,.8);border:2px dashed #ff9aa2;position:relative;transform:translateY(120vh);transition:transform 1.2s cubic-bezier(.25,.46,.45,.94)}
+        .letter.show{transform:translateY(0)}
+        .letter h2{font-family:'Dancing Script',cursive;font-size:3.5rem;color:#ff9aa2;text-align:center;margin-bottom:2rem}
+        .letter p{font-size:1.1rem;line-height:1.9;margin-bottom:1.8rem}
+        .letter-highlight{font-size:1.5rem;font-weight:800;color:#ff9aa2;text-align:center;margin:2.5rem 0}
+        .letter-sign{text-align:right;font-weight:700;opacity:.9;margin-top:2.5rem;font-style:italic;font-size:1.1rem}
+        .letter-close{width:100%;margin-top:3rem;padding:1.4rem;background:#2a1a2e;color:#fff;border:none;border-radius:50px;font-size:1.05rem;font-weight:700;cursor:pointer;transition:background .3s}
+        .letter-close:hover{background:#ff9aa2;color:#2a1a2e}
+        
+        .footer{text-align:center;padding:5rem 2rem 2rem;font-size:.95rem;opacity:.85;margin-top:3rem}
+        
+        @media(max-width:768px){.container{padding:0 1.5rem 3rem}.story-grid{gap:2rem}.promises{gap:1.5rem}.hero{padding:2.5rem 2rem}.wish-card{padding:3rem 2rem}.letter{padding:3rem 2rem}}
+        @media(max-width:480px){.hero{padding:2rem 1.5rem}h1{font-size:2.5rem}.section-title{font-size:2rem}.quiz-box{padding:2.5rem 1.5rem}.popup-content,.letter{padding:2.5rem 1.5rem}}
+    </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    
+    <header>
+        <div class="hero">
+            <div class="heart-container">
+                <svg width="180" height="160" viewBox="0 0 180 160" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M90,150 C20,100 5,70 5,50 C5,25 25,10 45,10 C60,10 75,20 90,35 C105,20 120,10 135,10 C155,10 175,25 175,50 C175,70 160,100 90,150 Z" 
+                          fill="#ff9aa2" opacity="0.75"/>
+                    
+                    <path d="M90,150 C25,105 12,72 12,50 C12,28 28,15 45,15 C58,15 70,23 85,37 L90,42 L95,37 C110,23 122,15 135,15 C152,15 168,28 168,50 C168,72 155,105 90,150 Z" 
+                          fill="#ffb7b2" opacity="0.9"/>
+                    
+                    <path d="M90,145 C35,105 20,75 20,55 C20,35 32,22 48,22 C62,22 72,30 90,45 C108,30 118,22 132,22 C148,22 160,35 160,55 C160,75 145,105 90,145 Z" 
+                          fill="#ffe5f3"/>
+                    
+                    <ellipse cx="65" cy="45" rx="22" ry="28" fill="#fff" opacity="0.18"/>
+                </svg>
+            </div>
+            <h1>Ammu ❤️</h1>
+            <p class="hero-text">My love, every moment with you feels like a beautiful dream I never want to wake up from.</p>
+            <div class="timer-label">Since October 16, 2025 • 11:29:29 PM</div>
+            <div class="timer" id="timer">00d 00h 00m 00s</div>
+            <button class="pill" onclick="document.querySelector('.container').scrollIntoView({behavior:'smooth'})">💝 2026 • Only For You</button>
+            <div class="scroll">Scroll through our beautiful story ⬇️</div>
+            <div class="arrow">⬇️</div>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 class="section-title">Our Memories</h2>
+        <p class="section-text">Every moment with you is a treasure I hold close to my heart, Ammu.</p>
+
+        <div class="story-grid">
+            <div class="story-card">
+                <div class="story-tag">That Night</div>
+                <div class="story-img"><img src="1.jpg" alt="First moment"></div>
+                <div class="story-title">When Time Stopped</div>
+                <div class="story-date">Oct 16 • 11:29 PM</div>
+                <p class="story-text">One glance and my entire world rewrote itself. That exact moment became the most sacred timestamp of my life.</p>
+            </div>
+
+            <div class="story-card">
+                <div class="story-tag">Every Day</div>
+                <div class="story-img"><img src="2.jpg" alt="Our laughs"></div>
+                <div class="story-title">You & Me</div>
+                <div class="story-date">Our Favorite Days</div>
+                <p class="story-text">Your random texts, your infectious laugh, the way you light up my darkest days—you are my favorite part of everything, Ammu.</p>
+            </div>
+
+            <div class="story-card">
+                <div class="story-tag">Always</div>
+                <div class="story-img"><img src="3.jpg" alt="Forever"></div>
+                <div class="story-title">My Safe Place</div>
+                <div class="story-date">Forever & Always</div>
+                <p class="story-text">That night when you cried and I held you, promising everything would be okay—I realized you are my forever, Ammu.</p>
+            </div>
+        </div>
+
+        <div class="video-section">
+            <h2 class="video-title">Watch You Dance</h2>
+            <div class="video-box">
+                <iframe src="https://drive.google.com/file/d/1KLi_3AjQ3A7_wAfBSflskLzvkIweO9f6/preview" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="dance-description">
+                <p>When you dance, Ammu, the entire world stops. Every movement is poetry, every step is grace. You move like you're telling a story only my heart can understand. There's magic in the way you flow, beauty in every turn. Watching you dance reminds me why I'm so completely, hopelessly in love with you. You don't just dance—you shine. You light up everything around you with that infectious energy, that pure joy. Keep dancing forever, my love. Keep being the beautiful soul that makes my heart skip a beat every single time. 💕</p>
+            </div>
+        </div>
+
+        <div class="wish-card">
+            <div class="wish-badge">Happy New Year 2026</div>
+            <h3 class="wish-title">My Only Wish</h3>
+            <div class="typewriter" id="wish"></div>
+            <div class="wish-note">You make every moment worth living, Ammu 💗</div>
+        </div>
+
+        <h2 class="section-title">My Promises To You</h2>
+        <div class="promises">
+            <div class="promise">
+                <div class="promise-icon">💌</div>
+                <div class="promise-title">I'll Always Listen</div>
+                <p class="promise-text">Your happy days, your silent tears, your deepest fears—I'll be here listening, loving, and holding your hand through it all, Ammu.</p>
+            </div>
+            <div class="promise">
+                <div class="promise-icon">💞</div>
+                <div class="promise-title">I'll Always Show Up</div>
+                <p class="promise-text">Through every sunrise and midnight, every storm and celebration—I promise to be there, showing up with all my heart for you.</p>
+            </div>
+            <div class="promise">
+                <div class="promise-icon">🌙</div>
+                <div class="promise-title">I'll Always Choose You</div>
+                <p class="promise-text">Every New Year, every ordinary day, every moment of my life—you remain my extraordinary choice, my Ammu.</p>
+            </div>
+        </div>
+
+        <section class="quiz">
+            <div class="quiz-box">
+                <h2 class="quiz-title">Only You Know This</h2>
+                <p class="quiz-text">Answer from our memories, Ammu 💕</p>
+                <div id="q1" class="quiz-card">
+                    <p class="quiz-q">When did our beautiful story truly begin?</p>
+                    <button class="quiz-btn" onclick="correct(1,'Perfect memory! ❤️','October 16, 2025 at 11:29:29 PM—the exact moment my heart decided it was yours forever, Ammu.')">October 16, 2025</button>
+                    <button class="quiz-btn" onclick="wrong()">November 16</button>
+                </div>
+                <div id="q2" class="quiz-card" style="display:none">
+                    <p class="quiz-q">What makes this heart the happiest?</p>
+                    <button class="quiz-btn" onclick="correct(2,'Always your smile!','Your smile, Ammu, turns even my worst days into the most beautiful ones.')">Your smile</button>
+                    <button class="quiz-btn" onclick="correct(2,'And your love!','Your love is the safe harbor this heart always sails back to.')">Your love</button>
+                </div>
+                <div id="q3" class="quiz-card" style="display:none">
+                    <p class="quiz-q">You mean to me...</p>
+                    <button class="quiz-btn" onclick="finalAnswer()">Everything</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <div class="popup-heart">💖</div>
+            <div class="popup-title" id="popup-title"></div>
+            <div class="popup-text" id="popup-text"></div>
+            <button class="popup-next" onclick="closePopup()">Continue Our Story →</button>
+        </div>
+    </div>
+
+    <div class="envelope" id="envelope" onclick="openLetter()">💌</div>
+
+    <div class="letter-modal" id="letter-modal">
+        <div class="letter" id="letter">
+            <h2>My Dearest Ammu,</h2>
+            <p>On <strong>October 16, 2025 at 11:29:29 PM</strong>, I didn't just meet someone beautiful. I met my forever. That moment changed everything about who I am and who I want to be.</p>
+            <p>A simple "Happy New Year" message could never hold what you mean to me, so I built this entire world instead. Every heartbeat, every glow, every detail on this page whispers what my heart feels: you are my everything, Ammu.</p>
+            <p class="letter-highlight">Happy New Year, my love. Happy New Year, my Ammu.</p>
+            <p style="opacity:.9;font-style:italic">Thank you for being my safe place, my home, my forever. I love you more than yesterday, less than tomorrow.</p>
+            <div class="letter-sign">Forever yours, Rethi ❤️</div>
+            <button class="letter-close" onclick="closeLetter()">Close This Beautiful World 💕</button>
+        </div>
+    </div>
+
+    <div class="footer">Made with every heartbeat for my beautiful Ammu 💗 • Happy New Year 2026</div>
+
+    <script>
+        // Stars
+        for(let i=0;i<60;i++){const s=document.createElement('div');s.className='star';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDelay=Math.random()*2+'s';s.style.animationDuration=(1+Math.random()*2)+'s';document.getElementById('stars').appendChild(s)}
+
+        // Timer
+        const start=new Date('2025-10-16T23:29:29').getTime();setInterval(()=>{const n=Date.now(),d=n-start,days=Math.floor(d/86400000),h=Math.floor(d%86400000/3600000),m=Math.floor(d%3600000/60000),s=Math.floor(d%60000/1000);document.getElementById('timer').textContent=`${days}d ${h}h ${m}m ${s}s`},1000);
+
+        // Typewriter
+        const txt="This New Year, I don't need resolutions or grand plans. I just want you, Ammu—your hand in mine through every laugh, every fight, every quiet moment. You are my forever.";let i=0;const w=document.getElementById('wish');const type=()=>{if(i<=txt.length){w.textContent=txt.slice(0,i++);setTimeout(type,50)}};setTimeout(type,2000);
+
+        // Quiz
+        let q=0;function correct(n,t,txt){document.getElementById('popup-title').textContent=t;document.getElementById('popup-text').textContent=txt;document.getElementById('popup').classList.add('show');q=n;document.getElementById('q'+n).style.display='none';if(n<3)document.getElementById('q'+(n+1)).style.display='block'}function wrong(){alert('You know our story better than that, Ammu 💕')}function closePopup(){document.getElementById('popup').classList.remove('show');if(q===2){document.getElementById('envelope').style.display='block'}}function finalAnswer(){openLetter()}
+
+        // Letter
+        function openLetter(){document.getElementById('letter-modal').classList.add('show');setTimeout(()=>document.getElementById('letter').classList.add('show'),100)}function closeLetter(){document.getElementById('letter').classList.remove('show');setTimeout(()=>document.getElementById('letter-modal').classList.remove('show'),800)}
+
+        // Hearts
+        setInterval(()=>{const h=document.createElement('div');h.innerHTML='💖';h.style.cssText=`position:fixed;top:-20px;left:${Math.random()*95}vw;font-size:${14+Math.random()*12}px;pointer-events:none;animation:fall 6s linear forwards;z-index:100;opacity:1`;h.style.animation='fall 6s linear forwards';const keyframes=`@keyframes fall{to{transform:translateY(110vh)rotate(720deg);opacity:0}}`;if(!document.querySelector('style[data-fall]')){const s=document.createElement('style');s.setAttribute('data-fall','');s.innerHTML=keyframes;document.head.appendChild(s)}document.body.appendChild(h);setTimeout(()=>h.remove(),6000)},800);
+
+        // Scroll reveal
+        const obs=new IntersectionObserver((e)=>{e.forEach(el=>{if(el.isIntersecting){el.target.style.opacity='1';el.target.style.transform='translateY(0)'}})},{threshold:.1});document.querySelectorAll('.story-card,.promise,.video-section').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(50px)';el.style.transition='all .8s ease';obs.observe(el)});
+    </script>
+</body>
+</html>
